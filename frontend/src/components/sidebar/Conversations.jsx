@@ -4,11 +4,9 @@ import Conversation from "./Conversation";
 
 const Conversations = () => {
   const { loading, conversations } = useGetConversation();
-  // console.log("CONVERSATIONS:", conversations);
   return (
     <div className=" py-2 flex flex-col overflow-auto">
       {conversations.map((convo, idx) => (
-        // console.log("newConvo", convo);
         <Conversation
           key={convo._id}
           conversation={convo}

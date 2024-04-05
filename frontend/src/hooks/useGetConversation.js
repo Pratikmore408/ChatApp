@@ -12,12 +12,12 @@ const useGetConversation = () => {
         const res = await fetch("/api/users");
         const data = await res.json();
 
-        console.log("DATA:", data);
         if (data.error) {
           throw new Error(data.error);
         }
         setConversation(data);
       } catch (error) {
+        console.log("inside usegetmessage catch");
         toast.error(error.message);
       } finally {
         setLoading(false);
