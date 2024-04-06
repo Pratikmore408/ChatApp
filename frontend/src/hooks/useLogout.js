@@ -23,7 +23,6 @@ const useLogout = () => {
       setAuthUser(null);
     } catch (error) {
       toast.error(error.message);
-      console.log("Inside logout Catch");
     } finally {
       setLoading(false);
     }

@@ -25,7 +25,6 @@ const useSendMessage = () => {
       setMessages([...messages, data]);
     } catch (error) {
       toast.error(error.message);
-      console.log("inside send message catch");
     } finally {
       setLoading(false);
     }
